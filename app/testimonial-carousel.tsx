@@ -28,20 +28,24 @@ export default function TestimonialCarousel() {
         <p className="kicker light"><span>●</span> Depoimentos</p>
         <p className="testimonial-count">{String(active + 1).padStart(2, "0")} — {String(testimonials.length).padStart(2, "0")}</p>
       </div>
-      <div className="testimonial-heading"><h2>Clientes <span>satisfeitos.</span></h2><p>Relações construídas com confiança, clareza e resultados consistentes.</p></div>
-      <div className="testimonial-stage" aria-live="polite">
-        {testimonials.map(([quote, company], index) => (
-          <article className={index === active ? "is-active" : ""} aria-hidden={index !== active} key={company}>
-            <span className="quote-mark">“</span>
-            <p>{quote}</p>
-            <div><span>{String(index + 1).padStart(2, "0")}</span><strong>{company}</strong></div>
-          </article>
-        ))}
-      </div>
-      <div className="testimonial-controls">
-        <button type="button" onClick={() => move(-1)} aria-label="Depoimento anterior">←</button>
-        <div>{testimonials.map(([, company], index) => <button type="button" className={index === active ? "is-active" : ""} onClick={() => setActive(index)} aria-label={`Exibir depoimento de ${company}`} key={company} />)}</div>
-        <button type="button" onClick={() => move(1)} aria-label="Próximo depoimento">→</button>
+      <div className="testimonial-content">
+        <div className="testimonial-heading"><h2>Clientes <span>satisfeitos.</span></h2></div>
+        <div className="testimonial-carousel-column">
+          <div className="testimonial-stage" aria-live="polite">
+            {testimonials.map(([quote, company], index) => (
+              <article className={index === active ? "is-active" : ""} aria-hidden={index !== active} key={company}>
+                <span className="quote-mark">“</span>
+                <p>{quote}</p>
+                <div><span>{String(index + 1).padStart(2, "0")}</span><strong>{company}</strong></div>
+              </article>
+            ))}
+          </div>
+          <div className="testimonial-controls">
+            <button type="button" onClick={() => move(-1)} aria-label="Depoimento anterior">←</button>
+            <div>{testimonials.map(([, company], index) => <button type="button" className={index === active ? "is-active" : ""} onClick={() => setActive(index)} aria-label={`Exibir depoimento de ${company}`} key={company} />)}</div>
+            <button type="button" onClick={() => move(1)} aria-label="Próximo depoimento">→</button>
+          </div>
+        </div>
       </div>
     </section>
   );

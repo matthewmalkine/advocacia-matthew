@@ -80,7 +80,34 @@ export default function Home() {
         <div className="service-list">{services.map((item) => <article key={item.number}><span className="service-number">{item.number}</span><div className="service-image"><Image src={item.image} alt="" fill sizes="180px" /></div><h3>{item.title}</h3><p>{item.text}</p><a href="#contato" aria-label={`Saiba mais sobre ${item.title}`}>↗</a></article>)}</div>
       </section>
 
-      
+      <section className="professional section" id="profissional">
+        <div className="professional-main">
+          <div className="professional-copy">
+            <p className="kicker"><span>01 /</span> Sobre mim</p>
+            <h2>Dr. Rafael <span>Almeida.</span></h2>
+            <div className="professional-rule" />
+            <p>Advogado com 5 anos de experiência atuando nas áreas de Direito Civil e Direito de Família.</p>
+            <p>Possui experiência em demandas relacionadas a divórcios, guarda de filhos, pensão alimentícia, inventários, partilhas de bens, contratos e responsabilidade civil.</p>
+            <p>atuação é pautada pela ética, transparência e comprometimento, oferecendo soluções jurídicas estratégicas e personalizadas, com foco na proteção dos direitos e interesses de seus clientes.</p>
+            <strong>Advogado civilista e de família</strong>
+          </div>
+
+          <div className="professional-portrait">
+            <Image
+              src="/assets/lawcase/rafael-almeida.png"
+              alt="Retrato profissional do advogado Rafael Almeida"
+              fill
+              sizes="(max-width: 700px) calc(100vw - 40px), 48vw"
+            />
+          </div>
+        </div>
+
+        <div className="professional-credentials">
+          <div><span>Formação</span><p>Bacharel em Direito na PUCPR</p></div>
+          <div><span>Atuação</span><p>Civil e Família</p></div>
+          <div><span>Registro</span><p>OAB/PR nº 45.678</p></div>
+        </div>
+      </section>
 
       <TestimonialCarousel />
 

@@ -11,7 +11,6 @@ const revealSelectors = [
   ".service-list article",
   ".professional-copy",
   ".professional-portrait",
-  ".professional-credentials",
   ".steps article",
   ".faq details",
   ".post-grid article",

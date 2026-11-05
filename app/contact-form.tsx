@@ -7,7 +7,17 @@ export default function ContactForm() {
 
   function handleSubmit(event: FormEvent<HTMLFormElement>) {
     event.preventDefault();
-    event.currentTarget.reset();
+
+    const form = event.currentTarget;
+    const formData = new FormData(form);
+    const name = String(formData.get("name") ?? "").trim();
+    const topic = String(formData.get("topic") ?? "").trim();
+    const message = String(formData.get("message") ?? "").trim();
+    const whatsappMessage = `Olá, meu nome é ${name}, estou contatando para tratar do assunto ${topic}. ${message}.`;
+    const whatsappUrl = `https://wa.me/${process.env.WHATSAPP_NUMBER}?text=${encodeURIComponent(whatsappMessage)}`;
+
+    window.open(whatsappUrl, "_blank", "noopener,noreferrer");
+    form.reset();
     setSent(true);
   }
 
@@ -19,8 +29,8 @@ export default function ContactForm() {
           <input name="name" type="text" autoComplete="name" placeholder="Seu nome" required />
         </label>
         <label>
-          <span>Telefone</span>
-          <input name="phone" type="tel" autoComplete="tel" placeholder="(00) 00000-0000" required />
+          <span>Assunto</span>
+          <input name="topic" type="text" placeholder="Assunto a conversar" required />
         </label>
       </div>
       <label>
@@ -29,7 +39,7 @@ export default function ContactForm() {
       </label>
       <button type="submit">Enviar <span aria-hidden="true">↗</span></button>
       <p className="contact-form-status" aria-live="polite">
-        {sent ? "Mensagem preparada com sucesso. Em breve entraremos em contato." : "Seus dados serão usados apenas para este atendimento."}
+        {sent ? "Mensagem preparada. Continue o envio pelo WhatsApp." : "Seus dados serão usados apenas para este atendimento."}
       </p>
     </form>
   );

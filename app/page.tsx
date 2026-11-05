@@ -10,10 +10,11 @@ const pillars = [
 ];
 
 const services = [
-  { number: "1/", title: "Direito Tributário", text: "Orientação sobre tributos, planejamento e conformidade para proteger pessoas e empresas e tornar decisões financeiras mais seguras.", image: "/assets/lawcase/vzTxyib8zsujRxdOR62McXyhxhg.jpg" },
+  { number: "1/", title: "Direito Civil", text: "Regularização das relações entre pessoas, incluindo contratos, propriedades, obrigações, indenizações e responsabilidade por danos.", image: "/assets/lawcase/vzTxyib8zsujRxdOR62McXyhxhg.jpg" },
   { number: "2/", title: "Direito de Família", text: "Acompanhamento cuidadoso em divórcio, guarda, sucessões, adoção e outros temas que envolvem relações familiares.", image: "/assets/lawcase/HA37E48AB0E8Pdno3Rgfn3NpA.jpg" },
-  { number: "3/", title: "Direito Imobiliário", text: "Assessoria em compra, venda, locação, regularização e disputas relativas a imóveis, com segurança em cada negociação.", image: "/assets/lawcase/0GfHSok4FpwF794IxxL1j5cJOc.jpg" },
-  { number: "4/", title: "Direito do Trabalho", text: "Soluções preventivas e contenciosas para relações de trabalho equilibradas, protegendo direitos e reduzindo riscos.", image: "/assets/lawcase/rlVzXYOqX40nNf1WB0T02RCvmL4.jpg" },
+  { number: "3/", title: "Direito Empresarial", text: "Cuida das atividades das empresas e dos empresários, abrangendo abertura de empresas, contratos comerciais, sociedades, recuperação judicial e falência.", image: "/assets/lawcase/rlVzXYOqX40nNf1WB0T02RCvmL4.jpg" },
+  { number: "4/", title: "Direito das Sucessões", text: "Regulamenta a transferência de bens e direitos após a morte de uma pessoa, incluindo heranças, testamentos, inventários e partilha de bens.", image: "/assets/lawcase/0GfHSok4FpwF794IxxL1j5cJOc.jpg" },
+  { number: "5/", title: "Direito do Trabalho", text: "Soluções preventivas e contenciosas para relações de trabalho equilibradas, protegendo direitos e reduzindo riscos.", image: "/assets/lawcase/rlVzXYOqX40nNf1WB0T02RCvmL4.jpg" },
 ];
 
 const steps = [
@@ -83,8 +84,8 @@ export default function Home() {
       <section className="professional section" id="profissional">
         <div className="professional-main">
           <div className="professional-copy">
-            <p className="kicker"><span>01 /</span> Sobre mim</p>
-            <h2>Dr. Rafael <span>Almeida.</span></h2>
+            <p className="kicker"> Sobre mim</p>
+            <h2>Dr. Álvaro <span>Vianna.</span></h2>
             <div className="professional-rule" />
             <p>Advogado com 5 anos de experiência atuando nas áreas de Direito Civil e Direito de Família.</p>
             <p>Possui experiência em demandas relacionadas a divórcios, guarda de filhos, pensão alimentícia, inventários, partilhas de bens, contratos e responsabilidade civil.</p>
@@ -94,8 +95,8 @@ export default function Home() {
 
           <div className="professional-portrait">
             <Image
-              src="/assets/lawcase/rafael-almeida.png"
-              alt="Retrato profissional do advogado Rafael Almeida"
+              src="/assets/lawcase/Smiling Professional in Navy Suit.png"
+              alt="Retrato profissional do advogado Álvaro Vianna"
               fill
               sizes="(max-width: 700px) calc(100vw - 40px), 48vw"
             />

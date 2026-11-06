@@ -14,7 +14,7 @@ export default function ContactForm() {
     const topic = String(formData.get("topic") ?? "").trim();
     const message = String(formData.get("message") ?? "").trim();
     const whatsappMessage = `Olá, meu nome é ${name}, estou contatando para tratar do assunto ${topic}. ${message}.`;
-    const whatsappUrl = `https://wa.me/${process.env.WHATSAPP_NUMBER}?text=${encodeURIComponent(whatsappMessage)}`;
+    const whatsappUrl = `https://wa.me/5541999584252?text=${encodeURIComponent(whatsappMessage)}`;
 
     window.open(whatsappUrl, "_blank", "noopener,noreferrer");
     form.reset();

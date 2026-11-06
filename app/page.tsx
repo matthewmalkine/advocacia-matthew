@@ -5,6 +5,9 @@ import TestimonialCarousel from "./testimonial-carousel";
 import {ArrowUpRight} from "lucide-react";
 
 const date = new Date().getFullYear();
+const instagramUrl = "https://www.instagram.com/drvianna/"
+const linkedinUrl = "https://www.linkedin.com/in/alvaro-vianna-93b3337b/"
+const whatsappUrl = "https://wa.me/5541999584252"
 
 const pillars = [
   { number: "01", title: "Justiça", text: "Comprometidos com decisões justas e resultados confiáveis.", image: "/assets/lawcase/qimono-gavel-249201_1920.jpg" },
@@ -17,7 +20,7 @@ const services = [
   { number: "2/", title: "Direito de Família", text: "Acompanhamento cuidadoso em divórcio, guarda, sucessões, adoção e outros temas que envolvem relações familiares.", image: "/assets/lawcase/HA37E48AB0E8Pdno3Rgfn3NpA.jpg" },
   { number: "3/", title: "Direito Empresarial", text: "Cuida das atividades das empresas e dos empresários, abrangendo abertura de empresas, contratos comerciais, sociedades, recuperação judicial e falência.", image: "/assets/lawcase/rlVzXYOqX40nNf1WB0T02RCvmL4.jpg" },
   { number: "4/", title: "Direito das Sucessões", text: "Regulamenta a transferência de bens e direitos após a morte de uma pessoa, incluindo heranças, testamentos, inventários e partilha de bens.", image: "/assets/lawcase/0GfHSok4FpwF794IxxL1j5cJOc.jpg" },
-  { number: "5/", title: "Direito do Trabalho", text: "Soluções preventivas e contenciosas para relações de trabalho equilibradas, protegendo direitos e reduzindo riscos.", image: "/assets/lawcase/Reunião Jurídica num Escritório Moderno.png" },
+  { number: "5/", title: "Direito Desportivo", text: " Atua na defesa dos interesses de todos os envolvidos no ecossistema do esporte (como atletas, clubes, empresários e federações)..", image: "/assets/lawcase/Reunião Jurídica num Escritório Moderno.png" },
 ];
 
 const steps = [
@@ -134,9 +137,12 @@ export default function Home() {
       </section>
 
       <footer>
-        <div className="footer-main"><div className="footer-intro"><a className="logo" href="#inicio" aria-label="Lawcase — início"><Image className="logo-image" src="/assets/lawcase/Logótipo de Advogado com Balança.png" alt="Lawcase" width={150} height={100} /></a><h2>Conhecimento jurídico e soluções personalizadas.</h2></div><div className="footer-column"><span>Navegação</span><a href="#sobre">Sobre nós</a><a href="#servicos">Serviços</a><a href="#contato">Contato</a></div><div className="footer-column"><span>Social</span><a href="#contato">LinkedIn ↗</a><a href="#contato">Instagram ↗</a><a href="#contato">X ↗</a></div></div>
+        <div className="footer-main"><div className="footer-intro"><a className="logo" href="#inicio" aria-label="Lawcase — início"><Image className="logo-image" src="/assets/lawcase/Logótipo de Advogado com Balança.png" alt="Lawcase" width={150} height={100} /></a><h2>Conhecimento jurídico e soluções personalizadas.</h2></div><div className="footer-column"><span>Navegação</span><a href="#sobre">Sobre nós</a><a href="#servicos">Serviços</a><a href="#contato">Contato</a></div><div className="footer-column"><span>Social</span><a href={linkedinUrl} target="_blank" rel="noreferrer">LinkedIn ↗</a><a href={instagramUrl} target="_blank" rel="noreferrer">Instagram ↗</a></div></div>
         <div className="footer-bottom"><span>© {date} Advocacia Álvaro D. de C. Vianna Neto</span><span></span><span>Curitiba · Brasil</span></div>
       </footer>
+      <a className="whatsapp-widget" href={whatsappUrl} target="_blank" rel="noreferrer" aria-label="Fale conosco pelo WhatsApp">
+        <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M20.5 3.5A11.8 11.8 0 0 0 12.1 0C5.6 0 .3 5.3.3 11.8c0 2.1.6 4.2 1.7 6L.2 24l6.3-1.7a11.8 11.8 0 0 0 5.6 1.4h.1c6.5 0 11.8-5.3 11.8-11.8 0-3.2-1.2-6.2-3.5-8.4Zm-8.4 18.1h-.1a9.8 9.8 0 0 1-5-1.4l-.4-.2-3.7 1 1-3.6-.2-.4a9.8 9.8 0 0 1-1.5-5.2C2.2 6.4 6.6 2 12.1 2c2.6 0 5.1 1 7 2.9a9.8 9.8 0 0 1 2.9 7c0 5.4-4.5 9.7-9.9 9.7Zm5.4-7.3c-.3-.1-1.7-.8-2-1-.3-.1-.5-.1-.7.2-.2.3-.7.9-.9 1.1-.2.2-.3.2-.6.1-1.6-.8-2.7-1.4-3.8-3.2-.3-.5.3-.5.8-1.6.1-.2.1-.4 0-.6-.1-.1-.6-1.5-.9-2-.2-.5-.5-.4-.7-.4h-.6c-.2 0-.6.1-.8.4-.3.3-1 1-1 2.5s1 2.9 1.1 3.1c.1.2 2 3.1 4.8 4.3 1.8.8 2.5.9 3.4.7.5-.1 1.7-.7 1.9-1.3.2-.6.2-1.2.1-1.3-.2-.1-.4-.2-.7-.3Z" /></svg>
+      </a>
     </main>
   );
 }
